@@ -1,0 +1,22 @@
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+
+func reverseList(head *ListNode) *ListNode {
+    var prev *ListNode
+	fmt.Println(prev)
+	cur := head
+
+	for cur != nil {
+		temp := cur.Next
+		cur.Next = prev
+		prev = cur
+		cur = temp
+	}
+
+	return prev
+}
